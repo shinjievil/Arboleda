@@ -1,6 +1,8 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
 
 public class Arbol {
 
@@ -36,6 +38,10 @@ public class Arbol {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 862, 681);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnJoto = new JButton("joto");
+		btnJoto.setBounds(36, 45, 97, 25);
+		frame.getContentPane().add(btnJoto);
 	}
-
 }
