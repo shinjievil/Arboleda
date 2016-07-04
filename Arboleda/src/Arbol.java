@@ -6,10 +6,12 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
+import java.awt.Label;
+import javax.swing.JLabel;
 
 public class Arbol {
 
-	private JFrame frame;
+	private JFrame frmArbol;
 	private JTextField textField;
 
 	/**
@@ -20,7 +22,7 @@ public class Arbol {
 			public void run() {
 				try {
 					Arbol window = new Arbol();
-					window.frame.setVisible(true);
+					window.frmArbol.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -39,26 +41,31 @@ public class Arbol {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 862, 681);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmArbol = new JFrame();
+		frmArbol.setTitle("ARBOL");
+		frmArbol.setBounds(100, 100, 862, 681);
+		frmArbol.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmArbol.getContentPane().setLayout(null);
 
 		JButton btnJoto = new JButton("A\u00F1adir");
 		btnJoto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnJoto.setBounds(12, 13, 97, 25);
-		frame.getContentPane().add(btnJoto);
+		btnJoto.setBounds(14, 31, 97, 25);
+		frmArbol.getContentPane().add(btnJoto);
 
 		JButton btnNewButton = new JButton("borrar");
-		btnNewButton.setBounds(390, 13, 97, 25);
-		frame.getContentPane().add(btnNewButton);
+		btnNewButton.setBounds(276, 31, 97, 25);
+		frmArbol.getContentPane().add(btnNewButton);
 
 		textField = new JTextField();
-		textField.setBounds(121, 14, 116, 22);
-		frame.getContentPane().add(textField);
+		textField.setBounds(136, 32, 116, 22);
+		frmArbol.getContentPane().add(textField);
 		textField.setColumns(10);
+		
+		Label label = new Label("Ingresar");
+		label.setBounds(14, 3, 97, 22);
+		frmArbol.getContentPane().add(label);
 	}
 }
