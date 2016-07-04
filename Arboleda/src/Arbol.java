@@ -3,10 +3,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class Arbol {
 
 	private JFrame frame;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -40,8 +44,21 @@ public class Arbol {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnJoto = new JButton("joto");
-		btnJoto.setBounds(36, 45, 97, 25);
+		JButton btnJoto = new JButton("A\u00F1adir");
+		btnJoto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnJoto.setBounds(12, 13, 97, 25);
 		frame.getContentPane().add(btnJoto);
+		
+		JButton btnNewButton = new JButton("borrar");
+		btnNewButton.setBounds(390, 13, 97, 25);
+		frame.getContentPane().add(btnNewButton);
+		
+		textField = new JTextField();
+		textField.setBounds(121, 14, 116, 22);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
 	}
 }
