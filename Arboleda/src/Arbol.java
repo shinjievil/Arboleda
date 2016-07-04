@@ -52,20 +52,21 @@ public class Arbol {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnJoto.setBounds(14, 31, 97, 25);
+		btnJoto.setBounds(234, 31, 97, 25);
 		frmArbol.getContentPane().add(btnJoto);
 
 		JButton btnNewButton = new JButton("borrar");
-		btnNewButton.setBounds(276, 31, 97, 25);
+		btnNewButton.setBounds(530, 31, 97, 25);
 		frmArbol.getContentPane().add(btnNewButton);
 
 		textField = new JTextField();
-		textField.setBounds(136, 32, 116, 22);
+		textField.setBounds(367, 32, 116, 22);
 		frmArbol.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		Label label = new Label("Ingresar");
-		label.setBounds(14, 3, 97, 22);
+		label.setAlignment(Label.CENTER);
+		label.setBounds(50, 34, 97, 22);
 		frmArbol.getContentPane().add(label);
 	}
 }
