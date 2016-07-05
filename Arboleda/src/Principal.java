@@ -8,8 +8,9 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Label;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-public class Arbol {
+public class Principal {
 
 	private JFrame frmArbol;
 	private JTextField textField;
@@ -21,7 +22,7 @@ public class Arbol {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Arbol window = new Arbol();
+					Principal window = new Principal();
 					window.frmArbol.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +34,7 @@ public class Arbol {
 	/**
 	 * Create the application.
 	 */
-	public Arbol() {
+	public Principal() {
 		initialize();
 	}
 
@@ -52,21 +53,28 @@ public class Arbol {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnJoto.setBounds(234, 31, 97, 25);
+		btnJoto.setBounds(22, 596, 97, 25);
 		frmArbol.getContentPane().add(btnJoto);
 
 		JButton btnNewButton = new JButton("borrar");
-		btnNewButton.setBounds(530, 31, 97, 25);
+		btnNewButton.setBounds(152, 596, 97, 25);
 		frmArbol.getContentPane().add(btnNewButton);
 
 		textField = new JTextField();
-		textField.setBounds(367, 32, 116, 22);
+		textField.setBounds(16, 559, 103, 22);
 		frmArbol.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		Label label = new Label("Ingresar");
-		label.setAlignment(Label.CENTER);
-		label.setBounds(50, 34, 97, 22);
-		frmArbol.getContentPane().add(label);
+		JButton btnNewButton_1 = new JButton("Buscar");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton_1.setBounds(152, 558, 97, 25);
+		frmArbol.getContentPane().add(btnNewButton_1);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(12, 13, 820, 512);
+		frmArbol.getContentPane().add(panel);
 	}
 }
